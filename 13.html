@@ -1,72 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Server Error Checker</title>
-    <style>
-        table, th, td {
-            border: 1px solid black;
-        }
-    </style>
-</head>
-<body>
-    <table style="width:100%">
-        <tr>
-            <th>Allow</th>
-            <th>First</th>
-            <th>Last</th>
-            <th>VoirReser</th>
-            <th>CipPre</th>
-            <th>Panel</th>
-        </tr>
-        <tr>
-            <td>True</td>
-            <td>Variable_01</td>
-            <td>Variable_02</td>
-            <td>True</td>
-            <td>True</td>
-            <td>True</td>
-        </tr>
-    </table>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0095)https://2870351976.cloudylink.com:3333/CMD_FILE_MANAGER/domains/wrmir.ir/public_html/index.html -->
+<html id="XF" lang="en-US" dir="LTR" data-app="public" data-template="thread_view_type_question" data-container-key="node-10" data-content-key="thread-424227" data-logged-in="FALSE" data-cookie-prefix="xf_" data-csrf="1657026470,75e422220bfda588728855dabfd6cd5d" class="has-no-js template-thread_view_type_question"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>13</title>
 
-    <script>
-        async function checkServerStatus() {
-            const url = "https://nwdi.wrm.ir/phpmyadmin/index.php?route=/";
-            
-            try {
-                // Send a request to the PHPMyAdmin URL
-                const response = await fetch(url);
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<link rel="icon" type="image/png" href="https://www.nwdi.wrm.ir/PIC/Favicon.png">
 
-                if (response.ok) {
-                    // If the server responds with an error
-                    updateTable();
-                } else {
-                    console.log("Server is working fine.");
-                }
-            } catch (error) {
-                console.error("Error connecting to the server:", error);
-                updateTable(); // Update the table if there's a connection error
-            }
-        }
+<style>
+table, th, td {
+  border:1px solid black;
+}
+</style>
+</head><body>
 
-        function updateTable() {
-            // Select all table cells with the value "True"
-            const cells = document.querySelectorAll("td");
-            cells.forEach(cell => {
-                if (cell.textContent.trim() === "True") {
-                    cell.textContent = "True_"; // Add an underscore
-                }
-            });
+<table style="width:100%">
+  <tbody><tr>
+    <th>Allow</th>
+    <th>First</th>
+    <th>Last</th>
+    <th>VoirReser</th>
+    <th>CipPre</th>
+    <th>Panel</th>
+  </tr>
+  <tr>
+    <td>True</td>
+    <td>Variable_01</td>
+    <td>Variable_02</td>
+    <td>True</td>
+    <td>True</td>
+    <td>True</td>
+  </tr>
+</tbody></table>
 
-            console.log("Table updated due to server error.");
-        }
-
-        // Check server status every 60 seconds
-        setInterval(checkServerStatus, 60000);
-
-        // Initial check on page load
-        checkServerStatus();
-    </script>
-</body>
-</html>
+</body></html>
